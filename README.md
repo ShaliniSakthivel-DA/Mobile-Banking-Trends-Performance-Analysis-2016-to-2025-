@@ -1,4 +1,4 @@
-# Mobile-Banking-Trends-Performance-Analysis (2016 to 2025)
+# Mobile-Banking-Trends-Performance-Analysis (2016 to 2025) - Excel & PowerBI
 
 This project analyzes mobile banking data using Excel and Power BI to understand transaction trends, customer behavior, and bank performance.
 
@@ -186,3 +186,5 @@ Classified data based on Transaction Category, Bank Type, and Customer Tier for 
 **10.	 Conclusion:**
 
 Mobile banking has grown significantly over the years with strong digital adoption.This analysis helps understand bank performance, customer behavior, and future growth trends, enabling data-driven decisions.
+
+#dataanalyst #dataanalysis #PowerBi #Excel

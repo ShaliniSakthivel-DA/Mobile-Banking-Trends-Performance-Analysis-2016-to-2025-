@@ -1,27 +1,16 @@
 # Mobile-Banking-Trends-Performance-Analysis (2016 to 2025)
 
-This project analyzes mobile banking data using Excel and Power BI to understand transaction trends, customer behavior, and bank performance. It highlights growth patterns, compares bank types, and provides insights into digital adoption, helping transform raw data into meaningful business decisions.
+This project analyzes mobile banking data using Excel and Power BI to understand transaction trends, customer behavior, and bank performance.
 
 **1. Project Objective:**
-The objective of this mini project is to perform real-world financial data analysis using:
 
-•	Microsoft Excel for data cleaning, transformation, and preparation
+•     Analyze mobile banking transactions and customer activity
 
-•	Power BI for interactive dashboard creation and insight generation
+•     Compare performance across bank types (Public, Private, Co-operative)
 
-This project focuses on analyzing mobile banking statistics to assess:
+•     Identify growth trends and digital adoption patterns
 
-•	Transaction volume and value distribution
-
-•	Customer activity and engagement levels
-
-•	Bank-wise performance (Public, Private, Co-operative)
-
-•	Transaction frequency and average value trends
-
-•	Risk indicators and adoption patterns
-
-The goal is to transform raw mobile banking transaction data into meaningful insights for decision-making, highlighting customer behavior, banking sector performance, and digital adoption trends.
+•     Generate insights for better business decision-making
 
 **2. Data Sources:**
 
@@ -31,125 +20,70 @@ The goal is to transform raw mobile banking transaction data into meaningful ins
 
 •	Domain: Financial Analytics
 
+•     45+ Rows and 14 Column
+
+**3. Tools & Technologies**
+
+•     Microsoft Excel
+
+•     Power Query
+
+•     Power BI
+
 **3. Problem Statement:**
 
-The rapid growth of mobile banking makes it important to analyze transaction data and customer usage patterns.
+•     Understand the growth of mobile banking over time
 
-This project focuses on evaluating Mobile banking performance using metrics like transactions, transaction value, and active customers across different states and bank types.
+•     Analyze transaction volume and transaction value
 
-It also aims to identify trends and customer behavior to improve banking services and support better decision-making.
+•     Study customer activity and usage patterns
 
-**Bank Performance Analysis**
+•     Compare performance of different bank types (Public, Private, Co-operative)
 
-To measure overall bank performance using transactions, transaction value, and active customers. 
+•     Identify top and low performing banks
 
-•	To find top and low performing banks based on transaction volume and value. 
+•     Analyze state-wise adoption of mobile banking
 
-•	To compare performance across Public, Private, and Cooperative banks. 
+•     Understand customer segments (Small, Medium, Large)
 
-•	To understand customer distribution across different banks. 
-
-•	To check efficiency using average transaction value and transaction frequency. 
-
-•	To understand each bank’s share in total mobile banking activity. 
-
-**Customer Behavior & Regional Insights** 
-
-•	To study customer distribution across states and identify adoption levels. 
-
-•	To understand customer segments (Small, Medium, Large) and their contribution to transactions. 
-
-•	To observe transaction patterns across different states and categories. 
-
-•	To identify states with highest and lowest mobile banking usage. 
-
-•	To compare spending behavior using average transaction value across states. 
-
-**Trend & Time Analysis** 
-
-•	To study transaction trends over time and overall growth pattern. 
-
-•	To measure Year-over-Year (YoY) growth in transactions. 
-
-•	To observe monthly trends and seasonal changes in usage. 
-
-•	To identify long-term patterns for future forecasting. 
-
-•	To compare performance over different time periods using historical data. 
+•     Identify trends and patterns for better decision-making
 
 **4.	Attribute Details:**
 
 The dataset includes fields such as id, date, month, year, bank name, state, number and amount of transactions, active customers, transaction category, bank type, average transaction value, customer tier, and transaction frequency per customer, used to analyze mobile banking performance and customer behavior.
 
-**5.	Tools & Technologies:**
+**5.	Data Preparation (Excel / Power Query/ Power BI):**
 
-Microsoft Excel & Power Query:
+•     Removed duplicates and handled missing values
 
-•	Excel 
+•     Standardized data formats and data types
 
-•	Power Query 
+**Created new columns:**
 
-•	Power BI
+     •     Transaction Category (Small / Medium / Large)
 
-**6.	Data Pre-Processing (Excel / Power Query/ Power BI):**
+     •     Customer Tier
 
-Tasks Performed:
+     •     Average Transaction Value
 
-•	Data Cleaning & Transformation: Removed duplicate records, handled missing values, standardized formats, and ensured correct data types for all columns. 
+     •     Transaction Frequency per Customer
 
-•	Handling Missing Values: Imputed missing values in no_of_active_customers using bank-wise logic to maintain data consistency and accuracy. 
+ **Built a Calendar Table for time-based analysis**
 
-•	Power Query Transformations: Applied transformations such as changing data types, creating custom columns, and automating data preparation steps. 
+**6.	Fact and Dimension Table Creation:**
 
-•	Feature Engineering (New Columns Added):
-
-**Created additional columns such as:** 
-
-•	Transaction Category: Classified transactions into small, medium, and large categories.
-
-•	State: Added a column to capture the state where the bank operates.
-
-•	Month and Year: Extracted from the Date column to enable time based analysis.
-
-•	Average Transaction Value: Calculated the average value per transaction.
-
-•	Customer Tier: Segmented customers into small, medium, and large tiers.
-
-•	Transaction Frequency per Customer: Derived the average number of transactions per customer.
-
-•	Calendar Table Creation: Created a separate date table to enable time-based analysis such as Year, Month, and support time intelligence functions.
-
-•	Time Intelligence: Implemented measures like YoY Growth % and MoM Growth % to analyze performance trends over time.
-
-•	Filtering & Sorting: Organized and filtered data to focus on relevant records for analysis. 
-
-•	Bank-wise Aggregation: Created a calculated table to derive bank-wise transaction counts, enabling efficient comparison of bank performance.
-
-**7.	Fact and Dimension Table Creation:**
+•    Used Star Schema
      
 •	Fact Table: Mobile Banking Statistics 
 
 •	Dimension Tables: Calendar Table
 
-**7.1 Classification of Fact and Dimension Tables:**
+•    Created relationships for time intelligence analysis
 
-The mobile banking dataset was structured using a star schema model.
+<img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/5cfdc0dd-e761-418f-88f9-489ee5774fe0" />
 
-•	The Mobile Banking Statistics table was treated as the Fact Table since it contains measurable attributes such as the number of transactions, average transaction value, number of active customers, and customer tier.
 
-•	The Calendar table was treated as a Dimension Table because it provides descriptive time attributes such as year, month, and quarter, which are essential for filtering and trend analysis.
-
-**8.	Data Modelling and DAX (Power BI):**
-
-**Data Model**
-
-•	Established relationships between the Mobile Banking Statistics table and the Calendar table.
-
-•	Defined one to many relationships between the Calendar table and the fact table.
-
-•	Ensured proper cardinality for accurate aggregation and filtering.
-
-**9. DAX Measures & Calculated Columns:**
+**7. DAX Measures & Calculated Columns:**
 
 **Calculated Measure:**
 
@@ -193,142 +127,62 @@ Classified data based on Transaction Category, Bank Type, and Customer Tier for 
 
 **Table Creation:**
 
-1.	Built a Calendar table with attributes like Year, Month, Quarter, and Day to enable time based filtering and trend analysis.
+•     Built a Calendar table with attributes like Year, Month, Quarter, and Day to enable time based filtering and trend analysis.
    
-**Relationship Establishment**
-
-•	A Many to One relationship was established between:
-
-•	Mobile Banking Statistics [Date] → Calendar [Date]
-
-•	This relationship enabled:
-
-•	Monthly trend analysis
-
-•	Year wise comparison
-
-•	Drill down functionality
-
-•	Time intelligence calculations
-
-3.	Created a BankWiseCount table to store aggregated bank level information such as Record Count, Total Transactions, and Total Amount.
+•     Created a BankWiseCount table to store aggregated bank level information such as Record Count, Total Transactions, and Total Amount.
    
-**10.	 Analysis and Visualizations (Power BI):**
+**8.	 Analysis and Visualizations (Power BI):**
 
 **Bank Performance Analysis**
 
-**Visuals Used:**
+•	KPI Cards for transactions, amount, and customers
 
-•	KPI Cards (Total Transactions, Total Transaction Amount, Active Customers, Transaction per Customer, Total Banks).
+•     Bank-wise comparison (Bar & Column Charts)
 
-•	Bar Chart (Transactions by Bank)
+•     Bank Type distribution (Donut Chart)
 
-•	Column Chart (Transaction Amount by Bank)
+•     Efficiency analysis (Scatter Plot)
 
-•	Donut Chart (Bank Type Distribution)
-
-•	Scatter Plot (Active Customers vs Transaction Amount – Efficiency Analysis).
-
-•	Page Navigator
-
-**Interactive Features:**
-
-•	Slicers (Bank Type, Bank Name, State, Year)
-
-•	Button Navigation (custom buttons for page switching)
-
-•	Edit Interactions (controlled slicer impact on visuals and cards)
-
-•	Consistent Layout and Color Theme
+<img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/a2312aa1-5b92-465c-9edd-e40f2f0c3da1" />
 
 **Customer Behavior & Regional Insights** 
 
-**Visuals Used:**
+•	Customers by State
 
-•	Bar Chart (Customers by State) – shows regional customer distribution
+•     Customer Tier segmentation
 
-•	Donut Chart (Customer Tier Distribution) – displays segmentation (Small / Medium / Large).
+•     State-wise transaction analysis (Map)
 
-•	Matrix / Heatmap (State vs Transaction Category) – highlights usage patterns across regions.
+•     Spending behavior by region
 
-•	Map (State-wise Transactions) – visualizes geographic transaction distribution
-
-•	Line / Column Chart (Avg Transaction Value by State) – shows spending behavior across states.
-
-**Interactive Features:**
-
-•	Slicers (State, Transaction Category) – for regional and behavioural filtering
-
-•	Slicers (Year) – To see the year wise bank performance
-
-•	Minimalistic Design – avoids clutter and focuses on insights
-
-•	Cross-filtering between visuals – selecting one chart updates others
-
-•	Consistent Color theme and layout
+<img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/4788d8fa-b4f1-4a9e-b3e2-be00313905a8" />
 
 **Trend & Time Analysis**
 
-**Visuals Used:**
+•	Year-wise transaction growth
 
-•	Line Chart (Transactions Count by Year) – The line chart shows a steady increase in mobile banking transactions from 2016 (0.8K) to 2024 (7.0K), reflecting consistent growth over the years.
+•     YoY Growth trends
 
-•	Line Chart (Year-over-Year Growth %) – The chart shows rapid growth in mobile banking transactions between 2016 (89%) and 2018 (202%), followed by a steady decline with minor fluctuations, reaching 29% in 2024.
+•     Monthly transaction patterns
 
-•	Line / Column Chart (Transaction Amount by Month-Year) – The line chart shows a sharp upward trend in transaction amounts from 2016 (5M) to 2024 (168,269M), with steady growth until 2023 followed by an exponential spike in 2024.
+•     Forecasting future growth
 
-•	Line Chart (Count of Transactions by Year): Compares yearly transaction volumes and includes forecasting for the next 10 years.
+**9.	 Insights & Conclusions:**
 
-•	Card Visual – Total Transactions: Displays the overall transaction count as a key KPI.
+•     Mobile banking transactions show consistent growth from 2016 to 2025
 
-•	Card Visual – YoY Growth %: Shows year over year growth percentage for performance comparison.
+•     Growth peaked in early years and is now stabilizing
 
-**Interactive Features:**
+•     Public sector banks dominate in customer base and transactions
 
-•	Year Slicer: Allows filtering by specific years to analyze trends interactively.
+•     Top banks contribute the majority of transaction volume
 
-•	Button Navigation (custom buttons for page switching)
+•     Urban states show higher adoption compared to rural areas
 
-•	Edit Interactions (controlled slicer impact on visuals and cards)
+•     Large customers contribute the highest transaction value
 
-•	Consistent Layout and Color Theme
+<img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/0299b395-70d5-4715-ba8e-0a4422b6146a" />
 
-**11.	 Insights & Conclusions:**
+**10.	 Conclusion:**
 
-**Bank Performance Analysis** 
-
-•	    State Bank of India leads with ~167B transactions, followed by HDFC Bank (~55.7B) and Bank of Baroda (~41.4B), showing that a few top banks dominate transaction volume, while most other banks contribute significantly lower volumes.
-
-•	Public Sector Banks lead with ~8.4B active customers, followed by Private Sector Banks (~4.0B) and Payment Banks (~1.6B), while other bank types have significantly lower and niche customer bases.
-
-•	State Bank f India leads with ~5.66B active customers, followed by HDFC Bank (~1.13B), while Kotak Mahindra Bank (~0.76B), ICICI Bank (~0.73B), and Axis Bank (~0.72B) form the next tier, indicating a highly concentrated customer base among top banks.
-
-•	Efficiency analysis shows SBI as both a high-volume and high-value performing bank. 
-
-**Customer Behavior & Regional Insights** 
-
-•	Maharashtra leads with (5,441) active customers, followed by Gujarat (3,681) and Karnataka (2,042), while most other states have significantly lower counts, indicating customer concentration in key economic regions. 
-
-•	Large customers (~10.46B) contribute the most, far exceeding Small (~3.63B) and Medium (~0.47B) segments. 
-
-•	Urban states show higher adoption rates, while rural states show steady but slower growth. 
-
-•	Maharashtra (HQ ~175M) leads in average transactions, followed by Punjab (~59M) and Delhi (~44M), with a sharp drop across other states.
-
-**Trend & Time Analysis** 
-
-•	Transaction count shows steady growth from 797 in 2016 to 6,966 in 2025, indicating consistent year-over-year increase in activity, with significant acceleration after 2018.
-
-•	YoY growth peaked in 2018 at 201.80%, followed by strong growth in 2019 (131.95%) and 2021 (111.26%), but gradually declined to 28.78% by 2025, indicating a shift from rapid expansion to a more stable growth phase.
-
-•	Mobile banking has experienced accelerated adoption and scaling, with 2024 marking an unprecedented surge in transaction value — indicating both deeper customer engagement and rapid expansion of digital financial services.
-
-•	Forecasting indicates continued growth in mobile banking over the coming years. Both historical and forecast data confirm a consistent upward trajectory, with monthly cumulative jumps translating into long-term growth forecasts that nearly double between 2025 and 2030.
-
-**12.	 Conclusion:**
-
-•	Mobile Banking Trends & Performance Analysis (2016–2025) highlights significant growth in digital transactions, customer adoption, and banking efficiency over time. 
-
-•	The analysis provides clear insights into bank performance, regional usage patterns, and customer behavior using key KPIs. 
-
-•	These findings support data-driven decision-making and indicate strong long-term growth potential in mobile banking services.
+Mobile banking has grown significantly over the years with strong digital adoption.This analysis helps understand bank performance, customer behavior, and future growth trends, enabling data-driven decisions.

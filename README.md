@@ -169,7 +169,7 @@ Classified data based on Transaction Category, Bank Type, and Customer Tier for 
 
 **9.	 Insights & Conclusions:**
 
-**Descriptive Analysis**
+**Descriptive Analysis:**
 
 **Bank Performance Analysis**
 
@@ -199,7 +199,7 @@ Classified data based on Transaction Category, Bank Type, and Customer Tier for 
 
 •     Mobile banking usage has significantly increased, with a major surge in 2024.
 
-**Diagnostic Analysis**
+**Diagnostic Analysis:**
 
 •     The dominance of SBI is driven by its extensive branch network, strong digital infrastructure, and high trust among customers.
 
@@ -213,7 +213,7 @@ Classified data based on Transaction Category, Bank Type, and Customer Tier for 
 
 •     Slowing growth after 2021 indicates market maturity and saturation in urban digital adoption.
 
-**Predictive Insights**
+**Predictive Insights:**
 
 •     Mobile banking is expected to continue strong upward growth, driven by digital transformation and fintech innovations.
 
